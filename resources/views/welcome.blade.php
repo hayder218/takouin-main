@@ -23,7 +23,7 @@
 
         {{-- PERSONALIZED CSS --}}
         <link rel="stylesheet" href="{{asset('build/assets/css/style.css')}}">
-        {{-- <link rel="stylesheet" href="{{asset('build/assets/css/owl.carousel.min.css')}}"> --}}
+        
         <link rel="stylesheet" href="{{asset('build/assets/css/owl.theme.default.min.css')}}">
 
 
@@ -340,10 +340,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="intro">
-                        <h6>Blog</h6>
-                        <h1>Blog Posts</h1>
-                        <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                            roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
+                        <h6>أخر الفعاليات و النشاطات</h6>
+                        <h1>Lorem, ipsum.</h1>
+                        <p class="mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum assumenda impedit ipsam quas nemo? Eius quisquam qui quaerat nesciunt tenetur ab consequuntur totam ducimus at!</p>
                     </div>
                 </div>
             </div>
