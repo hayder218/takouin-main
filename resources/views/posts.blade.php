@@ -10,15 +10,18 @@
             </div>
         </div>
         <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="service">
-                    <img src="/build/assets/images/icon1.png" alt="">
-                    <h5>Digital Marketing</h5>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                        classical Latin literature from</p>
+            @foreach ($articles as $article)
+                <div class="col-lg-4 col-md-6">
+                    <div class="service">
+                        {{-- <img src="{{$article->id}}" alt=""> --}}
+                        <h5>{{$article->title}}</h5>
+                        <p>{{$article->content}}</p>
+                        <p>{{$article->created_at}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
+            @endforeach
+            
+            {{-- <div class="col-lg-4 col-md-6">
                 <div class="service">
                     <img src="/build/assets/images/icon2.png" alt="">
                     <h5>Logo Designing</h5>
@@ -57,7 +60,7 @@
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
                         classical Latin literature from</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

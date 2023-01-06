@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticleStatusController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/', 'PostController@index')->name('index');
+
+Route::resource('articles', ArticleController::class)->only(['index']);
+Route::resource('/', ArticleStatusController::class)->only(['index']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

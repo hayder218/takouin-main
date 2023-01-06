@@ -10,10 +10,10 @@
                 <a href="#"><i class='bx bxl-instagram'></i></a>
                 <a href="#"><i class='bx bxl-pinterest'></i></a>
             </div>
-            <div class="col-auto">
+            {{-- <div class="col-auto">
                 <p> <i class='bx bxs-envelope'></i> debra.holt@example.com</p>
                 <p> <i class='bx bxs-phone-call'></i> (213) 555-0114</p>
-            </div>
+            </div> --}}
             
         </div>
     </div>
