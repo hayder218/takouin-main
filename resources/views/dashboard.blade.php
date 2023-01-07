@@ -1,4 +1,4 @@
-<x-app-layout>
+{{-- <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-app-layout> --}}
 
 <!doctype html>
 <html lang="ar" dir="rtl">
@@ -95,11 +95,10 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">اسم الشركة</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">مديرية التعليم و التكوين لولاية إيليزي</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="عرض/إخفاء لوحة التنقل">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="بحث" aria-label="بحث">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
       <a class="nav-link px-3" href="#">تسجيل الخروج</a>
@@ -121,64 +120,19 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="file" class="align-text-bottom"></span>
-              الطلبات
+              الإعلانات
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
-              المنتجات
+              الأخبار
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="users" class="align-text-bottom"></span>
-              الزبائن
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-              التقارير
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers" class="align-text-bottom"></span>
-              التكاملات
-            </a>
-          </li>
-        </ul>
-
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-          <span>التقارير المحفوظة</span>
-          <a class="link-secondary" href="#" aria-label="إضافة تقرير جديد">
-            <span data-feather="plus-circle" class="align-text-bottom"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              الشهر الحالي
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              الربع الأخير
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              التفاعل الإجتماعي
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              مبيعات نهاية العام
+              المقالات
             </a>
           </li>
         </ul>
@@ -190,18 +144,13 @@
         <h1 class="h2">لوحة القيادة</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">مشاركة</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">تصدير</button>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar" class="align-text-bottom"></span>
-            هذا الأسبوع
-          </button>
         </div>
+
+        {{-- @include('posts') --}}
       </div>
 
-
-      <h2>عنوان القسم</h2>
+      
      
     </main>
   </div>

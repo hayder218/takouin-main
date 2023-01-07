@@ -4,7 +4,7 @@
     
   {{-- NEWS --}}
 
-  @include('news')
+  @include('articles')
 
   {{-- POSTS --}}
   @include('posts')

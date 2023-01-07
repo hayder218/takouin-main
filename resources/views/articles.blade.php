@@ -11,15 +11,19 @@
         </div>
     </div>
     <div id="projects-slider" class="owl-theme owl-carousel">
+        @foreach ($articles as $article)
+            
+        
         <div class="project">
             <div class="overlay"></div>
             <img src="/build/assets/images/project1.jpg" alt="">
             <div class="content">
-                <h2>Consulting Marketing</h2>
-                <h6>Website Design</h6>
+                <h2>{{$article->title}}</h2>
+                <h6></h6>
             </div>
         </div>
-        <div class="project">
+        @endforeach
+        {{-- <div class="project">
             <div class="overlay"></div>
             <img src="/build/assets/images/project2.jpg" alt="">
             <div class="content">
@@ -50,7 +54,7 @@
                 <h2>Consulting Marketing</h2>
                 <h6>Website Design</h6>
             </div>
-        </div>
+        </div> --}}
     </div>
     
 </section>

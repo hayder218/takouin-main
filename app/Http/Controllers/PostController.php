@@ -16,7 +16,7 @@ class PostController extends Controller
     {
         $posts = Post::latest();
 
-        return view('welcome', compact('posts'));
+        return view('posts', compact('posts'));
     }
 
     /**
@@ -48,7 +48,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('dashboard', compact(['posts']));
     }
 
     /**

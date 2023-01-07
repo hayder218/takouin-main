@@ -10,13 +10,13 @@
             </div>
         </div>
         <div class="row g-4">
-            @foreach ($articles as $article)
+            @foreach ($posts as $post)
                 <div class="col-lg-4 col-md-6">
                     <div class="service">
                         {{-- <img src="{{$article->id}}" alt=""> --}}
-                        <h5>{{$article->title}}</h5>
-                        <p>{{$article->content}}</p>
-                        <p>{{$article->created_at}}</p>
+                        <h5>{{$post->title}}</h5>
+                        <p>{{$post->content}}</p>
+                        <p>{{$post->created_at}}</p>
                     </div>
                 </div>
             @endforeach

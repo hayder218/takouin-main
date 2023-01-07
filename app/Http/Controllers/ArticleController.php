@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all();
-        return view('posts', compact(['articles']));
+        return view('articles', compact(['articles']));
     }
 
     /**
@@ -25,7 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,7 +36,24 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'image' => 'required |image|mimes:jpeg,png,jpg,gif,svg|10024'
+        ]);
+
+        $input = $request->all();
+
+        if($image = $request->file('image')){
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+
+        Article::create($input);
+
+        return redirect()->route('createArticle')->with('success', 'Article created successfuly');
     }
 
     /**

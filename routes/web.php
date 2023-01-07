@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticleStatusController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +27,13 @@ Route::resource('articles', ArticleController::class)->only(['index']);
 Route::resource('/', ArticleStatusController::class)->only(['index']);
 
 
+// create article
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -37,3 +42,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+// Admin + Dashboard 
+Route::get('/admin', [LoginController::class, 'showLoginForm']);
+
+
+// 
